@@ -24,20 +24,20 @@
 <template>
   <section class="mt-24 w-full p-4 flex flex-wrap justify-between gap-2">
     <div v-for="product in products" :key="product.id" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-  <a href="#">
+  <router-link :to="`/product/${product.id}`">
     <img class="rounded-t-lg object-cover h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 w-full" :src="product.images[0]" alt="" />
-  </a>
+  </router-link>
   <div class="p-5">
-    <a href="#">
+    <router-link :to="`/product/${product.id}`">
       <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ product.title }}</h5>
-    </a>
+    </router-link>
     <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ product.description }}</p>
-    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+    <router-link :to="`/product/${product.id}`" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
       Read more
       <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
       </svg>
-    </a>
+    </router-link>
   </div>
 </div>
 <div v-if="loading" role="status" class="w-full flex justify-center item-center min-h-screen">

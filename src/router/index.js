@@ -10,8 +10,8 @@ const routes = createRouter({
             component: Home
         },
         {
-            path: "/about",
-            component: About
+            path: "/product/:id",
+            component: About,
         }
     ]
 })

@@ -9,7 +9,7 @@
         </div>
         <ul class="flex w-1/2 gap-3 justify-end">
         <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/about">About</router-link></li>
+        <li><router-link to="/product/1">About</router-link></li>
     </ul>
     </nav>
 </template>
